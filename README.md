@@ -134,7 +134,7 @@ data.boxplot(column='Maximum Width', by = 'class', ax=axes[2,0])
 data.boxplot(column='Body Depth', by = 'class', ax=axes[2,1])
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_01.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_01.png)
 
 
 While the orange and blue female show a good separation in several features the male counterparts are very close together. The __Body Depth__ and __Frontal Lobe__ dimensions are the best features to differentiate both species in the male sub class.
@@ -146,7 +146,7 @@ While the orange and blue female show a good separation in several features the 
 data[data_columns].hist(figsize=(12,6), layout=(2,3))
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_02.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_02.png)
 
 ```python
 fig, axes = plt.subplots(nrows=5, ncols=1, figsize=(10,20))
@@ -157,7 +157,7 @@ sns.histplot(data, x='Maximum Width', hue='class', kde=True, element='step', bin
 sns.histplot(data, x='Body Depth', hue='class', kde=True, element='step', bins=20, ax=axes[4])
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_03.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_03.png)
 
 
 Again, the orange and blue coloured distributions - representing the females of the orange and blue species - are well seperated. But there is a large overlap between the male counterparts. We can see that while the boxplot still showed a visible difference in the __Frontal Lobe__ and __Body Depth__ mean value, it is much harder to differentiate the histrograms.
@@ -170,7 +170,7 @@ sns.pairplot(data, hue='class')
 # sns.pairplot(data, hue='class', diag_kind="hist")
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_04.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_04.png)
 
 
 The pairplot plots the relationships of each pair of features. We can see that there are several plots that separate between our female and male classes. For example the __Rear Width__ separates the green/blue (male) dots from the orange/red (female) ones. There is some separation between both female species (red/orange dots) in the __Frontal Lobe__ and __Body Depth__ graphs. But again, it is hard to separate both male species - there is always a strong overlap between the blue and green dots.
@@ -239,7 +239,7 @@ plt.title('Scree Plot')
 
  According to the scree test, the "elbow" of the graph where the eigenvalues seem to level off is found and factors or components to the left of this point should be retained as significant - here this would be the first two or three classes:
     
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_05.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_05.png)
 
 ```python
 fig = plt.figure(figsize=(10, 6))
@@ -255,7 +255,7 @@ plt.legend()
 
 The values of the amount of variance a component brings to our dataset and it's cumulative sum shows the same 'elbow' to pick our principal components from:
     
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_06.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_06.png)
 
 
 ### Component PCA Weights
@@ -271,7 +271,7 @@ sns.heatmap(
     annot=True)
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_07.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_07.png)
 
 
 ## Transformation and Visualization
@@ -302,7 +302,7 @@ fig = plt.figure(figsize=(12, 8))
 _ = sns.scatterplot(x='PC1', y='PC2', hue='class', data=data_norm)
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_08.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_08.png)
 
 
 ### 3D Plot
@@ -338,9 +338,9 @@ plot = px.scatter_3d(
 plot.show()
 ```
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_09.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_09.png)
 
-![Dimensionality Reduction](./assets/Dimensionality_Reduction_10.png)
+![Dimensionality Reduction](https://github.com/mpolinowski/principle-component-analysis/blob/master/assets/Dimensionality_Reduction_10.png)
 
 
 Separation! Nice :)
